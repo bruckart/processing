@@ -18,7 +18,7 @@ class AnxietyBall
     theVelocity = new PVector(round(random(0, 1.5)),
                               round(random(0, 1.5)));
   }
-  
+
   void update()
   {
     theAcceleration = PVector.random2D();
@@ -27,6 +27,14 @@ class AnxietyBall
     theVelocity.limit(1);
     
     theLocation.add(theVelocity);
+    
+    
+    float ellipseWidth = ((float) mouseX / (float) width) * 64;
+    System.out.println("1. : " + mouseX);
+    System.out.println("2. : " + width);
+    System.out.println(" - " + ellipseWidth);
+    
+    theDiameter = (int) ellipseWidth;
   }
 
   synchronized void draw()

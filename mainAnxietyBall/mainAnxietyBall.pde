@@ -1,4 +1,8 @@
-// This sketch demonstrates a ball wth random motion.
+//***
+// This sketch demonstrates a ball with random motion. Future
+// enhancement is that the ball size shrinks as someone
+// approaches the exhibit.
+//***
 
 AnxietyBall[] balls = new AnxietyBall[16];
 
@@ -13,6 +17,8 @@ void setup()
     balls[i] = new AnxietyBall();
   }
 }
+
+
 
 void draw()
 {
