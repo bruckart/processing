@@ -32,16 +32,20 @@ void draw()
     angle += 0.001;
   }
 
-  // c.display();
-  // g.display();
+  c.display();
   // hc.display();
-  p.display();
+  // p.display();
 }
+
 void keyPressed()
 {
   if (key == ' ')
   {
     System.out.println("Rotate");
     rotate = (rotate == true) ? false : true;
+  }
+  else if (key == 'n')
+  {
+    
   }
 }

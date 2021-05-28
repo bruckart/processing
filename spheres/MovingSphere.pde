@@ -6,21 +6,21 @@ class MovingSphere
   public PVector m_vel = new PVector();
   public PVector m_acc = new PVector();
   public color   m_c   = color(200, 200, 200, 100);
-  
+
   public float m_mass   = 20;
   private float m_radius = 16; // random(5, 20);
-  
+
   MovingSphere()
   {
     m_loc = PVector.random3D().mult(200);
     m_vel = PVector.random3D().mult(2);
   }
-  
+
   void setVel(PVector v)
   {
     m_vel = v;
   }
-  
+
   void update()
   {
     if (m_pause)
@@ -31,7 +31,7 @@ class MovingSphere
     m_loc.add(m_vel);
     m_acc.mult(0);
   }
-  
+
   // Newton's 2nd law: F = M * A
   // or A = F / M
   void applyForce(PVector force)
@@ -94,7 +94,7 @@ class MovingSphere
       m_vel.y *= -1;
     }
   }
-  
+
   void checkCollision(MovingSphere ms)
   {
     // PVector diffCpy = ms.m_loc.copy();
@@ -390,7 +390,6 @@ class MovingSphere
     popStyle();
   }
 
-  
   void pause()
   {
     m_pause = true;
@@ -399,10 +398,8 @@ class MovingSphere
   {
     m_pause = false;
   }
-  
   void setColor(color c)
   {
     m_c = c;
   }
-  
 }

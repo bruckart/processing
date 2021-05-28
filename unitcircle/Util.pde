@@ -2,9 +2,6 @@
   
 class Util
 {
-  Util()
-  {
-  }
   
   // Note (Z is Up)
   void drawAxis()
